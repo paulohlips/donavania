@@ -1,4 +1,8 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
+
+export const window_width = window.innerWidth;
+export const window_height = window.innerHeight;
+export const small_screen = window_width < 650;
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');

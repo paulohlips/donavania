@@ -1,24 +1,82 @@
 import styled from "styled-components";
 
+export const window_width = window.innerWidth;
+export const window_height = window.innerHeight;
+export const small_screen = window_width < 650;
+
 export const Container = styled.div`
   display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
   flex-direction: column;
+`;
+
+export const Card = styled.form`
+  display: flex;
+  background-color: #bbb;
+  margin-top: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   align-self: center;
+  padding-bottom: 30px;
+  height: auto;
+  width: 60vw;
+  border-radius: 8px;
+  margin-left: 30%;
+
+  @media screen and (max-device-width: 425px) {
+    display: flex;
+    background-color: #bbb;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding-bottom: 30px;
+    height: auto;
+    width: 95vw;
+    border-radius: 8px;
+  }
+
+  @media screen and (max-device-width: 370px) {
+    display: flex;
+    background-color: #bbb;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding-bottom: 30px;
+    height: auto;
+    width: 95vw;
+    border-radius: 8px;
+  }
+`;
+
+export const Navigation = styled.div`
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    display: flex;
+    width: 3.2rem;
+    height: 3.2rem;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-top: 25px;
+
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+  }
 `;
 
 export const Image = styled.img`
   max-width: 100%;
   height: auto;
-`;
-export const Card = styled.form`
-  display: flex;
-  height: auto;
-  width: 80%;
-  margin: 30px;
-  background-color: #ccc;
-  flex-direction: column;
-  align-self: center;
-  padding-bottom: 30px;
 `;
 
 export const Input = styled.input`
@@ -32,7 +90,7 @@ export const Icon = styled.img`
   justify-content: center;
   height: 70px;
   width: 70px;
-  margin: 20px 0;
+  margin: 15px 0;
 `;
 
 export const Text = styled.text`
@@ -45,8 +103,23 @@ export const Text = styled.text`
 export const Content = styled.text`
   margin: 5px 5px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
   color: #000;
+`;
+
+export const Button = styled.button`
+  display: flex;
+  justify-content: space-around;
+  display: inline-flex;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: green;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 25px;
+
+  font-weight: bold;
 `;
 
 export const Box = styled.div`
@@ -54,9 +127,10 @@ export const Box = styled.div`
   align-self: center;
   margin: 5px 5px;
   width: 90%;
-  height: 60px;
+  height: auto;
   border-style: solid;
   border-width: 1px;
   border-color: #aaa;
   align-items: center;
+  margin-right: 5px;
 `;
