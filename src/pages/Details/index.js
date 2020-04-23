@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+import { Modal, Button } from "react-bootstrap";
 
 import {
   Container,
@@ -8,41 +9,59 @@ import {
   OrderDetails,
   ButtonMore,
   ButtonFinalize,
-  ButtonContent,
   Total,
   Item,
 } from "./styles";
 
 import cart from "./../../assets/supermarket.svg";
 
-export default class Details extends Component {
-  render() {
-    return (
-      <Container>
-        <DetailsBox>
-          <Icon src={cart} />
-          <Title>Detalhes do Pedido</Title>
+export default function Details() {
+  const [show, setShow] = useState(false);
 
-          <OrderDetails>
-            <Item>
-              <p>1-Marmita G </p> <p>R$11,00</p>
-            </Item>
-            <Item>
-              <p>1-Suco 500ml </p> <p>R$3,50</p>
-            </Item>
-            <Item>
-              <p>1-Pudim </p> <p>R$3,00</p>
-            </Item>
-          </OrderDetails>
-          <Total>Total R$17,50</Total>
-          <ButtonMore>
-            <ButtonContent>Comprar Mais</ButtonContent>
-          </ButtonMore>
-          <ButtonFinalize>
-            <ButtonContent>Finalizar Pedido</ButtonContent>
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  return (
+    <Container>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Me diz uma coisa,</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Você vem buscar ou prefere que a gente leve até você?
+        </Modal.Body>
+        <Modal.Footer>
+          <ButtonFinalize onClick={handleClose} onClick={"./D"}>
+            <span>Entregar</span>
           </ButtonFinalize>
-        </DetailsBox>
-      </Container>
-    );
-  }
+          <ButtonMore onClick={handleClose}>
+            <span>Retirar no Restaurante</span>
+          </ButtonMore>
+        </Modal.Footer>
+      </Modal>
+      <DetailsBox>
+        <Icon src={cart} />
+        <Title>Detalhes do Pedido</Title>
+
+        <OrderDetails>
+          <Item>
+            <p>1-Marmita G </p> <p>R$11,00</p>
+          </Item>
+          <Item>
+            <p>1-Suco 500ml </p> <p>R$3,50</p>
+          </Item>
+          <Item>
+            <p>1-Pudim </p> <p>R$3,00</p>
+          </Item>
+        </OrderDetails>
+        <Total>Total R$17,50</Total>
+        <ButtonMore to="menu">
+          <span>Comprar Mais</span>
+        </ButtonMore>
+        <ButtonFinalize onClick={handleShow}>
+          <span>Finalizar Peido</span>
+        </ButtonFinalize>
+      </DetailsBox>
+    </Container>
+  );
 }

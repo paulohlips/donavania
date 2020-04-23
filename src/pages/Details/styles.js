@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #bbb;
 `;
 
 export const DetailsBox = styled.div`
@@ -66,52 +68,91 @@ export const Item = styled.p`
   display: flex;
   justify-content: space-between;
 `;
-export const ButtonMore = styled.button`
+export const ButtonMore = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-content: center;
   height: 8vh;
   width: 40vw;
   margin: 15px 0;
   border-radius: 8px;
   margin-top: 80px;
   align-self: center;
+  background-color: #ccc;
+  color: #000;
 
   @media screen and (max-device-width: 420px) {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     height: 8vh;
     width: 80vw;
     margin: 15px 0;
     border-radius: 8px;
     margin-top: 180px;
+    background-color: #ccc;
+    color: #000;
   }
 
   @media screen and (max-device-width: 370px) {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     height: 8vh;
     width: 80vw;
     margin: 15px 0;
     border-radius: 8px;
+    background-color: #ccc;
+    color: #000;
+  }
+
+  span {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: bold;
   }
 `;
 
-export const ButtonFinalize = styled.button`
+export const ButtonFinalize = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-content: center;
   height: 8vh;
   width: 40vw;
   border-radius: 8px;
   background-color: green;
   align-self: center;
+  color: #000;
 
   @media screen and (max-device-width: 420px) {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     height: 8vh;
     width: 80vw;
     border-radius: 8px;
     background-color: green;
+    color: #000;
   }
 
   @media screen and (max-device-width: 370px) {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     height: 8vh;
     width: 80vw;
     border-radius: 8px;
     background-color: green;
+    color: #000;
   }
-`;
 
-export const ButtonContent = styled.p`
-  font-weight: bold;
+  span {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
 `;

@@ -32,8 +32,8 @@ export default createGlobalStyle`
   }
 
   a {
-    text-decoration: none;
-  }
+    text-decoration: none !important;
+}
 
   ul {
     list-style: none;
