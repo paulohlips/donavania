@@ -1,4 +1,5 @@
-import React, { Component, Link } from "react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import {
   Image,
@@ -248,7 +249,13 @@ export default class Menu extends Component {
           <a href="#slide-2">2</a>
           <a href="#slide-3">3</a>
           <a href="#slide-4">4</a>
-          <Button>Fim</Button>
+          <Button
+            onClick={() => {
+              window.location.href = "Details";
+            }}
+          >
+            FIM
+          </Button>
         </Navigation>
       </Container>
     );
