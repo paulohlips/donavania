@@ -30,6 +30,32 @@
   max-height: 75vh;
 }
 
+@media screen and (max-device-width: 425px) {
+  .slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 95vw;
+    height: 75vh;
+    max-height: 75vh;
+  }
+}
+
+@media screen and (max-device-width: 370px) {
+  .slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: 10px;
+    width: 95vw;
+    height: 75vh;
+    max-height: 75vh;
+  }
+}
+
 .slides > div {
   display: flex;
   justify-self: center;
@@ -42,33 +68,7 @@
   border-radius: 8px;
 }
 
-@media screen and (max-device-width: 370px) {
-  .slider {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 5px;
-    margin-left: 10px;
-    width: 95vw;
-    height: 75vh;
-    max-height: 75vh;
-  }
-}
-
 @media screen and (max-device-width: 425px) {
-  .slider {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 5px;
-    margin-left: 10px;
-    width: 95vw;
-    height: 75vh;
-    max-height: 75vh;
-  }
-}
-
-@media screen and (max-device-width: 370px) {
   .slides > div {
     display: flex;
     justify-self: center;
@@ -80,7 +80,7 @@
   }
 }
 
-@media screen and (max-device-width: 425px) {
+@media screen and (max-device-width: 370px) {
   .slides > div {
     display: flex;
     justify-self: center;

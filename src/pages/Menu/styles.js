@@ -13,19 +13,20 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.form`
-  display: flex;
-  background-color: #bbb;
-  margin-top: 20px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  padding-bottom: 30px;
-  height: auto;
-  width: 60vw;
-  border-radius: 8px;
-  margin-left: 30%;
-
+  @media only screen and (min-width: 430px) {
+    display: flex;
+    background-color: #bbb;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding-bottom: 30px;
+    height: auto;
+    width: 60vw;
+    border-radius: 8px;
+    margin-left: 20vw;
+  }
   @media screen and (max-device-width: 425px) {
     display: flex;
     background-color: #bbb;
@@ -55,6 +56,14 @@ export const Card = styled.form`
 `;
 
 export const Navigation = styled.div`
+  @media only screen and (min-width: 430px) {
+    display: flex;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+  }
   display: flex;
   justify-content: space-around;
 
