@@ -98,6 +98,8 @@ export const ButtonMore = styled(Link)`
     display: flex;
     justify-content: center;
     align-content: center;
+    align-self: center;
+
     height: 8vh;
     width: 80vw;
     margin: 15px 0;

@@ -31,10 +31,10 @@ export default function Details() {
           Você vem buscar ou prefere que a gente leve até você?
         </Modal.Body>
         <Modal.Footer>
-          <ButtonFinalize onClick={handleClose} onClick={"./D"}>
+          <ButtonFinalize onClick={handleClose} to={"delivery"}>
             <span>Entregar</span>
           </ButtonFinalize>
-          <ButtonMore onClick={handleClose}>
+          <ButtonMore onClick={handleClose} to={"local"}>
             <span>Retirar no Restaurante</span>
           </ButtonMore>
         </Modal.Footer>
@@ -59,7 +59,7 @@ export default function Details() {
           <span>Comprar Mais</span>
         </ButtonMore>
         <ButtonFinalize onClick={handleShow}>
-          <span>Finalizar Peido</span>
+          <span>Finalizar Pedido</span>
         </ButtonFinalize>
       </DetailsBox>
     </Container>
