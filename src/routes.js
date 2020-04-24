@@ -18,7 +18,7 @@ export default function Routes() {
         <Route path="/signup" component={SignUp} />
         <Route path="/menu" component={Menu} />
         <Route path="/details" component={Details} />
-        <Route path="/delivey" component={Delivery} />
+        <Route path="/delivery" component={Delivery} />
         <Route path="/local" component={Local} />
       </Switch>
     </Router>
