@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import { Modal } from "react-bootstrap";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  height: auto;
+  height: 100%;
   border-radius: 8px;
   margin-top: 5vh;
   padding-bottom: 2vh;
-  background-color: #ccc;
+  background-color: #aaa;
 
   .question {
     align-self: center;
@@ -17,20 +18,53 @@ export const Container = styled.div`
     font-size: 1.1rem;
   }
 
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  input {
+    height: 3vh;
+    width: auto;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
   @media only screen and (min-width: 720px) {
     display: flex;
-    background-color: #bbb;
+    background-color: #aaa;
     margin-top: 20px;
     flex-direction: column;
 
     align-items: center;
     align-self: center;
     padding-bottom: 30px;
-    height: 90vh;
+    height: 95vh;
     width: 60vw;
     border-radius: 8px;
     margin-left: 20vw;
   }
+
+  @media screen and (max-device-width: 376px) {
+    display: flex;
+    background-color: #aaa;
+    margin-top: 20px;
+    flex-direction: column;
+
+    align-items: center;
+    padding-bottom: 30px;
+    height: auto;
+    border-radius: 8px;
+  }
+`;
+
+export const Line = styled.div`
+  display: flex;
+  width: 98%;
+  height: 3px;
+  background-color: #bbb;
+  margin-bottom: 1vh;
 `;
 
 export const Icon = styled.img`
@@ -63,7 +97,11 @@ export const Box = styled.div`
 export const Link = styled.a`
   font-weight: bold;
   align-self: center;
-  margin-top: 5vh;
+  margin: 3vh 0;
+
+  p {
+    color: red;
+  }
 `;
 
 export const Confirm = styled.button`
@@ -72,36 +110,65 @@ export const Confirm = styled.button`
   align-content: center;
   height: 8vh;
   width: 40vw;
-  border-radius: 8px;
   background-color: green;
   align-self: center;
   color: #000;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
 
-  @media screen and (max-device-width: 420px) {
+  @media screen and (max-device-width: 425px) {
     display: flex;
     justify-content: center;
     align-content: center;
     height: 8vh;
     width: 80vw;
-    border-radius: 8px;
     background-color: green;
     color: #000;
     font-size: 1.1rem;
     font-weight: bold;
   }
 
-  @media screen and (max-device-width: 370px) {
+  @media screen and (max-device-width: 375px) {
     display: flex;
     justify-content: center;
     align-content: center;
     height: 8vh;
     width: 80vw;
-    border-radius: 8px;
     background-color: green;
     color: #000;
     font-size: 1.1rem;
+    font-weight: bold;
+  }
+`;
+
+export const ModalView = styled(Modal)`
+  input {
+    height: 5vh;
+    width: 99%;
+    margin: 5px 0;
+    border-width: 2px;
+    border-radius: 8px;
+    padding: 0 5px;
+  }
+`;
+
+export const Item = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  select {
+    margin: 1.2vh 2vw;
+    height: 3vh;
+    width: 45%;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  input {
+    margin: 1.2vh 2vw;
+    height: 3.5vh;
+    width: 30%;
+    font-size: 0.9rem;
     font-weight: bold;
   }
 `;

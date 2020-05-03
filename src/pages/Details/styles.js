@@ -3,10 +3,41 @@ import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  background-color: #bbb;
+
+  height: 100%;
+  border-radius: 8px;
+  margin-top: 5vh;
+  padding-bottom: 2vh;
+  background-color: #aaa;
+  padding: 0 5vw;
+
+  @media only screen and (min-width: 720px) {
+    display: flex;
+    background-color: #aaa;
+    margin-top: 20px;
+    flex-direction: column;
+
+    align-items: center;
+    align-self: center;
+    padding-bottom: 30px;
+    height: 95vh;
+    width: 60vw;
+    border-radius: 8px;
+    margin-left: 20vw;
+  }
+
+  @media screen and (max-device-width: 376px) {
+    display: flex;
+    background-color: #aaa;
+    margin-top: 20px;
+    flex-direction: column;
+
+    align-items: center;
+    padding-bottom: 30px;
+    height: auto;
+    border-radius: 8px;
+  }
 `;
 
 export const DetailsBox = styled.div`
@@ -41,6 +72,7 @@ export const OrderDetails = styled.div`
     height: auto;
     width: 60vw;
     margin: 20px;
+    padding: 0 5vw;
   }
   flex-direction: column;
   font-size: 1.1rem;
@@ -49,6 +81,7 @@ export const OrderDetails = styled.div`
 
   border-top: 0.5px solid rgb(150, 150, 150);
   border-bottom: 0.5px solid rgb(150, 150, 150);
+  padding: 0 5vw;
 
   p {
     margin: 10px 0;
@@ -76,7 +109,6 @@ export const ButtonMore = styled(Link)`
   width: 40vw;
   margin: 15px 0;
   border-radius: 8px;
-  margin-top: 80px;
   align-self: center;
   background-color: #ccc;
   color: #000;
@@ -89,7 +121,6 @@ export const ButtonMore = styled(Link)`
     width: 80vw;
     margin: 15px 0;
     border-radius: 8px;
-    margin-top: 180px;
     background-color: #ccc;
     color: #000;
   }

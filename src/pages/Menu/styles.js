@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const Card = styled.form`
   @media only screen and (min-width: 430px) {
     display: flex;
-    background-color: #bbb;
+    background-color: #aaa;
     margin-top: 20px;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +29,7 @@ export const Card = styled.form`
   }
   @media screen and (max-device-width: 425px) {
     display: flex;
-    background-color: #bbb;
+    background-color: #aaa;
     margin-top: 20px;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +43,7 @@ export const Card = styled.form`
 
   @media screen and (max-device-width: 370px) {
     display: flex;
-    background-color: #bbb;
+    background-color: #aaa;
     flex-direction: column;
     justify-content: center;
     align-items: center;

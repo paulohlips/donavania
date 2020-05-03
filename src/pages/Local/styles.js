@@ -8,11 +8,11 @@ export const Container = styled.div`
   border-radius: 8px;
   margin-top: 5vh;
   padding-bottom: 2vh;
-  background-color: #ccc;
+  background-color: #aaa;
 
   @media only screen and (min-width: 720px) {
     display: flex;
-    background-color: #bbb;
+    background-color: #aaa;
     margin-top: 20px;
     flex-direction: column;
     justify-content: center;
